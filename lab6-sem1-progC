@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>SUIIT Assignments</title>
+
+<link rel="icon" type="image/png" sizes="16x16" href="/download.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/download.png">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@300&display=swap');
+* {
+  box-sizing: border-box;
+}
+  body {
+  margin: 0;
+  padding: 0;
+  width:100%;
+  background: #420039;
+}
+
+.pretty-nav {
+  top:0;
+  width:100%;
+  position: fixed;
+  z-index:1;
+  background: #171738;
+  display: flex;
+  margin-top:-5px;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.pretty-nav ul {
+  display: flex;
+  font-family: 'Marhey', cursive;
+  list-style-type: none;
+  overflow: hidden;
+  align-items: center;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.pretty-nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 8px;
+  margin-top: 8px;
+  display: block;
+}
+
+.pretty-nav ul li a::after {
+  content: '';
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: block;
+  transform: scaleX(.3);
+  opacity: 0;
+  border-bottom: 2px solid #d72638;
+}
+
+.pretty-nav ul li a:hover::after {
+  content: '';
+  opacity: 1;
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  display: block;
+  transform: scaleX(1);
+  border-bottom: 2px solid #d72638;
+} 
+
+.pretty-nav button {
+  display: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 10px 4px;
+  outline: none;
+  border: none;
+  background: #d72638;
+}
+
+.pretty-nav button span {
+  background: white;
+  transition: all 0.2s ease-in-out;
+  width: 26px;
+  height: 1px;
+  border: 2px solid white;
+  margin-bottom: 6px;
+  display: block;
+  border-radius: 2px;
+}
+
+.pretty-nav button.collapsed span:nth-child(1) {
+  transform: translate(0px, 11px) rotate(45deg);
+}
+
+.pretty-nav button.collapsed span:nth-child(2) {
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+.pretty-nav button.collapsed span:nth-child(3) {
+  transform: translate(0px, -11px) rotate(-45deg);
+}
+
+.logo {
+ 
+  font-family: 'Marhey', cursive;
+  z-index: 1;
+  color: white;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background: #3423A6;
+  padding: 18px;
+  border-radius: 10rem;
+  display:inline-block;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0px;
+  right: 50%;
+  z-index: -2;
+  border-radius: 3rem 0 0 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+.logo::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 3rem 3rem;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+}
+
+
+@media screen and (max-width: 700px) {
+  .pretty-nav {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .pretty-nav button {
+    display: block;
+  }
+  .pretty-nav ul {
+    width: 100%;
+    flex-direction: column;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.pretty-nav ul.expanded {
+  max-height: 100vh;
+}
+.card {
+   margin-left:auto;
+   margin-right:auto;
+   width:80%;
+  border-radius: 8px;
+   background-color: white;
+   padding: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+hr.new5 {
+  border: 3px solid white;
+  border-radius: 2px;
+  width:70%;
+  margin:auto;
+}
+
+.footer {
+  background-color: #2e2b2b;
+  padding: 10px;
+  font-family: arial;
+  color: #ebd3d3;
+  text-align: center;
+    }
+
+  </style>
+
+  
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeConsoleRunner-6bce046e7128ddf9391ccf7acbecbf7ce0cbd7b6defbeb2e217a867f51485d25.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+<script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRuntimeErrors-4f205f2c14e769b448bcf477de2938c681660d5038bc464e3700256713ebe261.js"></script>
+</head>
+
+<body>
+  <nav class="pretty-nav">
+  <a href="https://www.bcasdu.gq"><div class="logo">SUIIT</div></a>
+  <button onclick="this.classList.toggle('collapsed');document.getElementById('nav-links').classList.toggle('expanded')" style="margin-right:40px">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <ul id="nav-links">
+    <li><a href="#"><b>Practicals</b></a></li>
+    <li><a href="#"><b>About Us</b></a></li>
+  </ul>
+</nav>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 style="color: white; text-align:center; font-family: 'Poppins', cursive;"> Lab 5 : Programming in C </h1><hr class="new5">
+  <div class="row">
+    <div class="card">
+      <h2>Question 1</h2>
+      <p> Write a program that prints the number from 1 to 20.
+      <br>
+      <script src="//onlinegdb.com/embed/js/5UtfddI-Ft?theme=dark"></script>
+
+    </div>
+  </div>
+ <div class="footer">
+   <p><b>Location</b></p>
+   <div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3712.6251373487294!2d83.88225447557959!3d21.48322048028225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a213c368309af57%3A0xdcd4d19c95624841!2sSambalpur%20University%20Institute%20of%20Information%20Technology%20(SUIIT)%2C%20Burla!5e0!3m2!1sen!2sin!4v1764922544818!5m2!1sen!2sin" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
+   <hr style="color:white; width:80%; margin:auto; height:2px;">
+   <p><b>Copyright &copy; 2025 | SUIIT</b></p>
+</div>
+	
+<script>
+	var text = document.getElementById("text");
+	var shadow = '';
+	
+	for (var i = 0; i < 200; i++) {
+		shadow += (shadow? ',':'')+ i * 1+'px ' + i*1 + 'px 0px rgba(0, 0, 0, 0)';
+	}
+	
+	text.style.textShadow = shadow;
+</script>
+
+</body>
+</html>
